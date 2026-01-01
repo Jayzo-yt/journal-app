@@ -29,7 +29,7 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body
-        className={`min-h-screen flex flex-col font-sans ${geistSans.variable} ${geistMono.variable} bg-[url('/white.png')] bg-center bg-cover bg-fixed bg-no-repeat`}>
+        className={`min-h-screen flex flex-col font-sans ${geistSans.variable} ${geistMono.variable} bg-[url('/bg.jpg')] bg-center bg-cover bg-fixed bg-no-repeat`}>
         
         <Header />
        <main className="flex-1">{children}</main>
