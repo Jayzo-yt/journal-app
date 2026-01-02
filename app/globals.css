@@ -123,3 +123,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .gradient-title{
+    background: linear-gradient(45deg, #0e0e0e, #101010);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 111px;
+   
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+  ;
+    
+  }
+}

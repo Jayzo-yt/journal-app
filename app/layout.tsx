@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@/components/Squares.css";
+import SquaresClient from "@/components/ui/SquaresClient";
 import { Header } from "@/components/ui/header";
 import { ClerkProvider } from "@clerk/nextjs";
 
@@ -29,14 +31,16 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body
-        className={`min-h-screen flex flex-col font-sans ${geistSans.variable} ${geistMono.variable} bg-[url('/bg.jpg')] bg-center bg-cover bg-fixed bg-no-repeat`}>
-        
-        <Header />
-       <main className="flex-1">{children}</main>
-       <footer className="mx-auto px-4 w-full py-4 flex items-center justify-center border-t text-sm text-gray-500">
-        2026 &copy; Journal App
-        developed by Jayzo
-       </footer>
+        className={`relative min-h-screen flex flex-col font-sans ${geistSans.variable} ${geistMono.variable} bg-[#f2f1f4]`}>
+        <SquaresClient borderColor="#9b9797" hoverFillColor="#454545" />
+        <div className="relative z-10 w-full">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <footer className="mx-auto px-4 w-full py-4 flex items-center justify-center border-t text-sm text-gray-500">
+            2026 &copy; Journal App
+            developed by Jayzo
+          </footer>
+        </div>
       </body>
     </html>
     </ClerkProvider>

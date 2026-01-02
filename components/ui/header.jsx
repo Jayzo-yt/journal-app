@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from "@clerk/nextjs";
 import { FolderOpenIcon, PenBoxIcon, User } from "lucide-react";
-import { Button } from "./button";
+import { Button } from "../button";
 import UserMenu from "./user-menu";
 
 export const Header = () => {
@@ -28,7 +28,7 @@ export const Header = () => {
                 </SignedIn>
 
                 <Link href={"/journal/write"}>
-                    <Button variant="journal" className="flex items-center gap-2">
+                    <Button variant="outline" className="flex items-center gap-2">
                         <PenBoxIcon size={18} />
                         <span className="hidden md:inline">Write New</span>
                     </Button>
@@ -36,7 +36,7 @@ export const Header = () => {
 
 
                 <SignedOut>
-                    <SignInButton forceRedirectUrl="/dashboard">
+                    <SignInButton className="flex items-center gap-2" forceRedirectUrl="/dashboard">
                         <Button variant="outline">Login</Button>
                     </SignInButton>
                 </SignedOut>
