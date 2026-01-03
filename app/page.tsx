@@ -108,7 +108,7 @@ export default function HomePage() {
             <ul>
               <li className="">
                 <div className="h-4 w-4 bg-gray-300 rounded-full mr-2 inline-block" />
-                <
+                
 
               </li>
             </ul>
