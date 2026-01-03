@@ -1,18 +1,99 @@
 import { Button } from "@/components/button"
+import { Skeleton } from "@/components/skeleton"
+import { Book, Calendar1Icon, Sparkles } from "lucide-react"
+import Link from "next/link"
+import { ChevronRight,Lock } from 'lucide-react';
+import { Card, CardContent } from "@/components/card";
+
+const features = [
+  {
+    icon: Book,
+    title: "Rich Text Editor",
+    description:
+      "Express yourself with a powerful editor supporting markdown, formatting, and more.",
+  },
+  {
+    icon: Sparkles,
+    title: "Daily Inspiration",
+    description:
+      "Get inspired with daily prompts and mood-based imagery to spark your creativity.",
+  },
+  {
+    icon: Lock,
+    title: "Secure & Private",
+    description:
+      "Your thoughts are safe with enterprise-grade security and privacy features.",
+  },
+];
+
 export default function HomePage() {
   return (
-    <div className="relative container mx-auto px-4 pt-16 pb-16">
-      <div className="max-w-5xl mx-auto text-center space-y-8">
-        <h1 className="text-8xl sm:text-7x1 md:text-7xl lg:text-9xl mb-6 gradient-title w-auto mx-auto">
-          Consistency is what transforms average<br/> into excellence.
+    <div className="container mx-auto px-4 pt-16 pb-16">
+      <div className="max-w-5xl mx-auto text-center space-y-10">
+
+        {/* Heading */}
+        <h1 className="text-6xl sm:text-7xl lg:text-8xl gradient-title">
+          Consistency is what transforms average into excellence.
         </h1>
-        <p className="text-lg md:text-xl text-gray-800 mb-8">
+
+        {/* Subtitle */}
+        <p className="rounded-lg border border-black text-lg md:text-xl text-gray-800 px-6 py-4 max-w-3xl mx-auto bg-gradient-to-b from-gray-200 via-white to-gray-100">
           Start your journaling journey today and unlock the power of daily reflection!
         </p>
-        
-        
-        
+
+        {/* Card with gradient frame */}
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-gradient-to-b from-gray-200 via-white to-gray-100 rounded-2xl p-[2px]">
+
+            <div className="bg-gradient-to-b from-gray-200 via-white to-gray-100 border border-black rounded-2xl p-6">
+              <div className="border-b border-gray-300 pb-2 mb-4 flex items-center gap-2">
+                <Calendar1Icon className="h-5 w-5" />
+                <span className="font-medium">Today’s Entry</span>
+              </div>
+
+              <div className="flex gap-2 mb-4">
+                <div className="h-3 w-3 rounded-full bg-gray-300" />
+                <div className="h-3 w-3 rounded-full bg-gray-400" />
+                <div className="h-3 w-3 rounded-full bg-gray-500" />
+              </div>
+
+              <div className="space-y-2">
+                <Skeleton className="h-4 w-3/4 bg-gray-200 rounded" />
+                <Skeleton className="h-4 w-full bg-gray-200 rounded" />
+                <Skeleton className="h-4 w-2/3 bg-gray-200 rounded" />
+              </div>
+            </div>
+
+          </div>
+          <div className="mt-7 flex justify-center gap-6">
+            <Link href="/dashboard">
+              <Button variant="outline" className="bg-gradient-to-b from-gray-200 via-white to-gray-100 border border-black px-8 py-6 rounded-full flex items-center gap-2 border border-black">
+                Start Journaling <ChevronRight className="h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="#features">
+              <Button variant="outline" className="bg-gradient-to-b from-gray-200 via-white to-gray-100 border border-black px-8 py-6 rounded-full flex items-center gap-2 border border-black">
+                Learn More 
+              </Button>
+            </Link>
+          </div>
+        </div>
+
       </div>
+      <section id="features" className="mt-24 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+          <Card key={feature.title} className="shadow-lg border border-black bg-gradient-to-b from-gray-200 via-white to-gray-100">
+            <CardContent>
+              <div className="h-12 w-12 bg-gradient-to-b from-gray-200 via-white to-gray-100 border border-black rounded-full flex items-center justify-center mb-4">
+                <feature.icon className="h-6 w-6 mb-1 text-gray-700" />
+              </div>
+              <h3 className="text-gray-800">{feature.description}</h3>
+            </CardContent>
+          </Card>
+        ))}
+          
+        
+      </section>
     </div>
   )
 }

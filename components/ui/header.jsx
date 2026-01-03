@@ -13,14 +13,14 @@ export const Header = () => {
         <header className="container mx-auto">
             <nav className="flex items-center justify-between py-6 px-4">
                 <Link href={"/"}>
-                    <Image src={"/logo.png"} alt="Logo" width={200} height={60}
-                    className="h-10 w-auto object-contain" />
+                    <Image src={"/logo.png"} alt="Logo" width={300} height={90}
+                    className="h-15 w-auto object-contain border border-black rounded-full" />
                 </Link>
             <div className="flex items-center space-x-4">
                 
                 <SignedIn>
                     <Link href={"/dashboard#collections"}>
-                    <Button variant="outline" className="flex items-center gap-2">
+                    <Button variant="outline" className="border border-black flex items-center gap-2">
                         <FolderOpenIcon size={18} />
                         <span className="hidden md:inline">Collections</span>
                     </Button>
@@ -28,7 +28,7 @@ export const Header = () => {
                 </SignedIn>
 
                 <Link href={"/journal/write"}>
-                    <Button variant="outline" className="flex items-center gap-2">
+                    <Button variant="outline" className="border border-black flex items-center gap-2">
                         <PenBoxIcon size={18} />
                         <span className="hidden md:inline">Write New</span>
                     </Button>

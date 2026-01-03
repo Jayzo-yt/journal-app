@@ -33,10 +33,10 @@ export default function RootLayout({
       <body
         className={`relative min-h-screen flex flex-col font-sans ${geistSans.variable} ${geistMono.variable} bg-[#f2f1f4]`}>
         <SquaresClient borderColor="#9b9797" hoverFillColor="#454545" />
-        <div className="relative z-10 w-full">
+        <div className="relative z-10 w-full flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">{children}</main>
-          <footer className="mx-auto px-4 w-full py-4 flex items-center justify-center border-t text-sm text-gray-500">
+          <footer className="mt-auto mx-auto px-4 w-full py-4 flex items-center justify-center border-t text-sm text-gray-500">
             2026 &copy; Journal App
             developed by Jayzo
           </footer>
