@@ -1,6 +1,6 @@
 import { Button } from "@/components/button"
 import { Skeleton } from "@/components/skeleton"
-import { Book, Calendar1Icon, Sparkles } from "lucide-react"
+import { Book, Calendar1Icon, FileText, Sparkles } from "lucide-react"
 import Link from "next/link"
 import { ChevronRight,Lock } from 'lucide-react';
 import { Card, CardContent } from "@/components/card";
@@ -94,6 +94,28 @@ export default function HomePage() {
           
         
       </section>
+
+      <div>
+        <div>
+          <div>
+            <div className="h-12 w-12 bg-gradient-to-b from-gray-200 via-white to-gray-100 border border-black rounded-full flex items-center justify-center mb-4">
+            <FileText className="h-6 w-6 mb-1 text-gray-700" />
+            </div>
+            <h3 className="text-gray-800">Comprehensive Journaling Tools</h3>
+            <p className="text-gray-600 mt-2">
+              Our platform offers a suite of tools designed to enhance your journaling experience. From customizable templates to mood tracking, we provide everything you need to make your journaling journey enjoyable and effective.
+            </p>
+            <ul>
+              <li className="">
+                <div className="h-4 w-4 bg-gray-300 rounded-full mr-2 inline-block" />
+                <
+
+              </li>
+            </ul>
+          </div>
+          <div></div>
+        </div>
+      </div>
     </div>
   )
 }
