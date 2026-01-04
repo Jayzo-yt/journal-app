@@ -95,26 +95,47 @@ export default function HomePage() {
         
       </section>
 
-      <div>
-        <div>
-          <div>
-            <div className="h-12 w-12 bg-gradient-to-b from-gray-200 via-white to-gray-100 border border-black rounded-full flex items-center justify-center mb-4">
-            <FileText className="h-6 w-6 mb-1 text-gray-700" />
-            </div>
-            <h3 className="text-gray-800">Comprehensive Journaling Tools</h3>
-            <p className="text-gray-600 mt-2">
-              Our platform offers a suite of tools designed to enhance your journaling experience. From customizable templates to mood tracking, we provide everything you need to make your journaling journey enjoyable and effective.
-            </p>
-            <ul>
-              <li className="">
-                <div className="h-4 w-4 bg-gray-300 rounded-full mr-2 inline-block" />
-                
+      <div className="mt-24 space-y-24 bg-gradient-to-b from-gray-200 via-white to-gray-100 rounded-2xl p-8 border border-black">
+       <div className="text-center space-y-8">
+        {/* Final Message */}
+        <h2 className="text-4xl md:text-5xl font-semibold text-gray-900">
+          Build the habit. The clarity follows.
+        </h2>
 
-              </li>
-            </ul>
+        <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+          Journaling isn’t about writing perfectly. It’s about showing up every day,
+          thinking clearly, and letting small actions compound into real growth.
+        </p>
+
+        {/* Trust Signals */}
+        <div className="flex flex-wrap justify-center gap-6 pt-4">
+          <div className="flex items-center gap-2 text-gray-700">
+            <Lock className="h-5 w-5" />
+            <span>End-to-end encrypted</span>
           </div>
-          <div></div>
+          <div className="flex items-center gap-2 text-gray-700">
+            <FileText className="h-5 w-5" />
+            <span>Unlimited entries</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-700">
+            <Calendar1Icon className="h-5 w-5" />
+            <span>Daily streak tracking</span>
+          </div>
         </div>
+
+        {/* Final CTA */}
+        <div className="pt-6">
+          <Link href="/dashboard">
+            <Button
+              variant="outline"
+              className="bg-gradient-to-b from-gray-200 via-white to-gray-100 border border-black px-10 py-7 rounded-full flex items-center gap-2 mx-auto"
+            >
+              Start Your First Entry <ChevronRight className="h-5 w-5" />
+            </Button>
+          </Link>
+        </div>
+      </div>
+
       </div>
     </div>
   )
