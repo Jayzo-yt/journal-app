@@ -36,8 +36,10 @@ export const Header = () => {
 
 
                 <SignedOut>
-                    <SignInButton className="flex items-center gap-2" forceRedirectUrl="/dashboard">
-                        <Button variant="outline">Login</Button>
+                    <SignInButton className="flex items-center gap-2 border border-black" forceRedirectUrl="/dashboard">
+                        <Button variant="outline" className="border border-black">
+                            <span>Login</span>
+                        </Button>
                     </SignInButton>
                 </SignedOut>
 
