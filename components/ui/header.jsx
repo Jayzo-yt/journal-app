@@ -1,14 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from "@clerk/nextjs";
 import { FolderOpenIcon, PenBoxIcon, User } from "lucide-react";
 import { Button } from "../button";
 import UserMenu from "./user-menu";
+import { checkUser } from "@/lib/checkUser";
 
 export const Header = () => {
+    useEffect(() => {
+        checkUser();
+    }, []);
   return (
         <header className="container mx-auto">
             <nav className="flex items-center justify-between py-6 px-4">
