@@ -26,7 +26,8 @@ const features = [
   },
 ];
 
-export default function HomePage() {
+export default async function LandingPage() {
+  
   return (
     <div className="container mx-auto px-4 pt-16 pb-16">
       <div className="max-w-5xl mx-auto text-center space-y-10">
