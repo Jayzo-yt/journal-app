@@ -7,11 +7,12 @@ import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from "@clerk/ne
 import { FolderOpenIcon, PenBoxIcon, User } from "lucide-react";
 import { Button } from "../button";
 import UserMenu from "./user-menu";
-import { checkUser } from "@/lib/checkUser";
+import { checkUser } from "@/lib/actions/checkUser";
 
 export const Header = () => {
     useEffect(() => {
-        checkUser();
+        // Check and create user if needed
+        checkUser().catch((err) => console.error("Error checking user:", err));
     }, []);
   return (
         <header className="container mx-auto">
