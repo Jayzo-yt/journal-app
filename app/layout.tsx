@@ -36,7 +36,7 @@ export default function RootLayout({
         <div className="relative z-10 w-full flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">{children}</main>
-          <footer className="mt-auto mx-auto px-4 w-full py-4 flex items-center justify-center border-t text-sm text-gray-500 border-black">
+          <footer className="mt-auto mx-auto px-4 w-full py-4 flex items-center justify-center border-t text-sm text-gray-500 border-black ">
             2026 &copy; Journal App
             developed by Jayzo
           </footer>

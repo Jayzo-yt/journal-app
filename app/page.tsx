@@ -68,8 +68,9 @@ export default async function LandingPage() {
           </div>
           <div className="mt-7 flex justify-center gap-6">
             <Link href="/dashboard">
-              <Button variant="outline" className="bg-gradient-to-b from-gray-200 via-white to-gray-100 border border-black px-8 py-6 rounded-full flex items-center gap-2 border border-black">
-                Start Journaling <ChevronRight className="h-5 w-5" />
+              <Button variant="outline" className="group bg-black text-white border border-black px-8 py-6 rounded-full flex items-center gap-2
+             hover:bg-white hover:text-black transition-colors">
+                Start Journaling <ChevronRight className="h-5 w-5 text-white group-hover:text-black transition-colors" />
               </Button>
             </Link>
             <Link href="#features">
