@@ -16,6 +16,8 @@ export async function createJournalEntry(data) {
         if (!User) {
             throw new Error("User not found in database");
         }
+
+        
     } catch (error) {
 
 
