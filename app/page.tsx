@@ -22,7 +22,7 @@ const features = [
     icon: Lock,
     title: "Secure & Private",
     description:
-      "Your thoughts are safe with enterprise-grade security and privacy features.",
+      "Your thoughts are safe with enterprise-grade security and privacy features no one can access your data except you.",
   },
 ];
 
