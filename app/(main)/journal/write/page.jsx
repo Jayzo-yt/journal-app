@@ -61,6 +61,14 @@ const JournalEntryPage = () => {
             </SelectContent>
           </Select>
               )}}  />
+          {error.mood && (
+              <p className="text-red-500 text-sm">{errors.mood.message}</p>
+          )}
+        </div>
+        <div>
+          <lable className="space-y-2">
+            {getMoodById(getValues("mood"))?.prompt ?? "Write your thoughts..."}
+          </lable>
         </div>
       </form>
     </div>
