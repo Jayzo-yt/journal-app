@@ -69,6 +69,29 @@ const JournalEntryPage = () => {
           <lable className="space-y-2">
             {getMoodById(getValues("mood"))?.prompt ?? "Write your thoughts..."}
           </lable>
+          <Controller
+            name="content"
+            controle={controle}
+            render={({ field })} => (
+              <ReactQuill
+                readOnly={isLoading}
+                theme="snow"
+                value={field.value}
+                onChange={field.onChange}
+                modules={{
+                  toolbar:[
+                    [{ header: [1,2,3,false] }],
+                    ["bold", "italic", "underline", "strike"],
+                    [{ list: "ordered" },{ list: "bullet" }],
+                    ["blockquote", "code-block"],
+                    ["link"],
+                    ["clean"],
+                  ],
+                }}
+              />
+          )}
+        />
+          
         </div>
       </form>
     </div>
