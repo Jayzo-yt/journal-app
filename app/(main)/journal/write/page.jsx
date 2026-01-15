@@ -91,6 +91,11 @@ const JournalEntryPage = () => {
               />
           )}
         />
+          {errors.content && (
+      <p className="text-red-500 text-sm">{errors.content.message}</p>
+      )}
+        </div>
+        
           
         </div>
       </form>
