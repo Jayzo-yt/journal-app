@@ -8,3 +8,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+//i dont like to loose my streak
