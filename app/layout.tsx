@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`relative min-h-screen flex flex-col font-sans ${geistSans.variable} ${geistMono.variable} bg-[#f2f1f4]`}>
-        <SquaresClient borderColor="#9b9797" hoverFillColor="#454545" />
+        style="background-color: lightblue;"
         <div className="relative z-10 w-full flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">{children}</main>
